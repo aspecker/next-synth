@@ -6,7 +6,7 @@ export default function SideNav() {
     <div
       className={classNames(
         'w-2/12 h-full fixed right-0 z-10',
-        'border-l-2 border-indigo-800 text-indigo-800'
+        'bg-slate-50 border-l-2 border-indigo-800 text-indigo-800'
       )}
     >
       <nav
