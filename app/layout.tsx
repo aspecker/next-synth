@@ -16,8 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <SideNav />
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <SideNav />
+        {children}
+      </body>
     </html>
   )
 }
