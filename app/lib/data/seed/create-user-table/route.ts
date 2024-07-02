@@ -8,7 +8,7 @@ export async function GET(request: Request) {
         id SERIAL PRIMARY KEY,
         email TEXT NOT NULL, 
         password TEXT NOT NULL,  
-        date_created TIME
+        date_created BIGINT
       );`;
     return NextResponse.json({ result }, { status: 200 });
   } catch (error) {

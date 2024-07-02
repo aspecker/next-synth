@@ -7,8 +7,8 @@ export async function GET(request: Request) {
     const result =
       await sql`CREATE TABLE songs ( 
         id SERIAL PRIMARY KEY,
-        date_created TIME,
-        last_updated TIME
+        date_created BIGINT,
+        last_updated BIGINT
       );`;
     return NextResponse.json({ result }, { status: 200 });
   } catch (error) {
