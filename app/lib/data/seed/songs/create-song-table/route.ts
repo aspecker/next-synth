@@ -3,12 +3,12 @@ import { NextResponse } from 'next/server';
  
 export async function GET(request: Request) {
   try {
+    // TODO - figure out how to model song data...
     const result =
-      await sql`CREATE TABLE users ( 
+      await sql`CREATE TABLE songs ( 
         id SERIAL PRIMARY KEY,
-        email TEXT NOT NULL, 
-        password TEXT NOT NULL,  
-        date_created BIGINT
+        date_created BIGINT,
+        last_updated BIGINT
       );`;
     return NextResponse.json({ result }, { status: 200 });
   } catch (error) {
